@@ -1,0 +1,70 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Native extensions and build outputs
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Editor and OS files
+.DS_Store
+*/.DS_Store
+.vscode/
+.idea/
+
+# Logs and experiment artifacts
+*.log
+*.pth
+*.pt
+*.ckpt
+*.mp4
+*.png
+
+# Local datasets and model weights
+vocaset/
+faceformer/vocaset
+demo/
+downloads/
+emotion2vec_plus_large/
+wav2vec2-base-960h/
+wav2vec2-large-xlsr-53/
+
+# modelmead local data links
+modelmead/templates.pkl
+modelmead/templates/flame_sample.ply
+modelmead/wav
+modelmead/vertices_npy
+
+# modelmead generated data, caches, checkpoints, and outputs
+modelmead/audio_cache/
+modelmead/emotion_cache/
+modelmead/vertices_npy_flat/
+modelmead/logs/
+modelmead/demo/
+modelmead/result*/
+modelmead/save*/
+modelmead/*_test/
+
+# Evaluation artifacts
+Perceptual-3D-Talking-Head/evaluation/MEAD_rms/
+Perceptual-3D-Talking-Head/evaluation/lip_disp/
+Perceptual-3D-Talking-Head/evaluation/lip_disp_old_format/
+Perceptual-3D-Talking-Head/evaluation/lip_disp_gt/
+Perceptual-3D-Talking-Head/evaluation/SLCC_results_*/
+Perceptual-3D-Talking-Head/evaluation/data_PLRS/

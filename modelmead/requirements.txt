@@ -1,0 +1,17 @@
+numpy
+scipy
+librosa
+tqdm
+torch
+torchvision
+torchaudio
+transformers
+trimesh
+pyrender
+opencv-python
+soundfile
+pyyaml
+
+# Required only when --use_emotion_fusion true or precomputing emotion cache.
+funasr
+modelscope

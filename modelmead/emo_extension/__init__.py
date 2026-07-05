@@ -1,0 +1,2 @@
+from .fusion_module import EmotionFusionBlock, align_sequence_length
+from .emotion2vec import DEFAULT_EMOTION2VEC_DIR, Emotion2VecFeatureReader

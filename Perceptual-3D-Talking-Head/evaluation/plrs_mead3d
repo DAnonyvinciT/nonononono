@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# MEAD3D 的 PLRS 评测脚本（GPU）
+
+# 输入维度配置
+input_size=160
+input_size_audio=64
+
+# 预训练评测模型路径
+MODEL_PATH="/home/tkface/workspace/FaceFormer/Perceptual-3D-Talking-Head/checkpoints/model_eval.pth"
+
+# 预测网格目录（MEAD3D 推理输出）
+EVAL_DATA_PATH="/home/tkface/workspace/FaceFormer/modelmead/result_full"
+
+# 音频目录（MEAD3D wav）
+WAV_PATH="${FACEFORMER_MEAD_DATASET_DIR:-$HOME/datasets/mead_clean}/wav"
+
+# 使用第 0 张 GPU 运行
+OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 \
+    --master_port 13307 \
+    evaluate_PLRS.py \
+    --model speech_mesh_rep \
+    --model_path ${MODEL_PATH} \
+    --input_size ${input_size} \
+    --input_size_audio ${input_size_audio} \
+    --depth 10 \
+    --depth_audio 10 \
+    --num_frames 5 \
+    --eval_data_path ${EVAL_DATA_PATH} \
+    --wav_path ${WAV_PATH}
