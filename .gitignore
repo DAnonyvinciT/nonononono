@@ -68,3 +68,7 @@ Perceptual-3D-Talking-Head/evaluation/lip_disp_old_format/
 Perceptual-3D-Talking-Head/evaluation/lip_disp_gt/
 Perceptual-3D-Talking-Head/evaluation/SLCC_results_*/
 Perceptual-3D-Talking-Head/evaluation/data_PLRS/
+
+# 排除整个 faceformer 和 Perceptual-3D-Talking-Head 文件夹（不从 GitHub 推送）
+faceformer/
+Perceptual-3D-Talking-Head/
